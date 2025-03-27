@@ -1,13 +1,9 @@
-function searchItems() {
-    let input = document.getElementById("searchBar").value.toLowerCase();
-    let items = document.querySelectorAll(".item");
-
+document.getElementById("search").addEventListener("keyup", function() {
+    let filter = this.value.toLowerCase();
+    let items = document.querySelectorAll("#items li");
+    
     items.forEach(item => {
-        let name = item.getAttribute("data-name").toLowerCase();
-        if (name.includes(input)) {
-            item.style.display = "block";
-        } else {
-            item.style.display = "none";
-        }
+        let text = item.textContent.toLowerCase();
+        item.style.display = text.includes(filter) ? "" : "none";
     });
-}
+});
