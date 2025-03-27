@@ -1,13 +1,49 @@
-function searchItems() {
-    let input = document.getElementById("searchBar").value.toLowerCase();
-    let items = document.getElementsByClassName("item");
-    
-    for (let i = 0; i < items.length; i++) {
-        let itemName = items[i].getAttribute("data-name").toLowerCase();
-        if (itemName.includes(input)) {
-            items[i].style.display = "block";
-        } else {
-            items[i].style.display = "none";
-        }
-    }
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+input {
+    float: right;
+    padding: 8px;
+    margin-right: 20px;
+}
+
+main {
+    padding: 80px 20px 20px;
+}
+
+#itemsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.item {
+    border: 1px solid #ddd;
+    padding: 15px;
+    width: 200px;
+    background: #f9f9f9;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
