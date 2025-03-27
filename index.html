@@ -1,50 +1,34 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    background-color: #f4f4f4;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Farmers Market</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
 
-header {
-    background-color: #28a745;
-    color: white;
-    padding: 15px;
-    position: relative;
-}
+    <header>
+        <h1>Virtual Farmers Market</h1>
+        <input type="text" id="searchBar" placeholder="Search items..." onkeyup="searchItems()">
+    </header>
 
-#searchBar {
-    position: absolute;
-    top: 15px;
-    right: 20px;
-    padding: 5px;
-    border: none;
-    border-radius: 5px;
-}
+    <main>
+        <div id="itemsContainer">
+            <div class="item" data-name="Apples">🍎 Apples - $3/kg</div>
+            <div class="item" data-name="Bananas">🍌 Bananas - $2/kg</div>
+            <div class="item" data-name="Carrots">🥕 Carrots - $1.5/kg</div>
+            <div class="item" data-name="Tomatoes">🍅 Tomatoes - $2.5/kg</div>
+        </div>
+    </main>
 
-main {
-    padding: 20px;
-}
+    <footer>
+        <p>Created by: Your Name</p>
+        <p>Email: your-email@example.com</p>
+        <p>Contact: +123 456 7890</p>
+    </footer>
 
-#itemsContainer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-}
+    <script src="script.js"></script>
 
-.item {
-    background: white;
-    padding: 15px;
-    border-radius: 5px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    width: 150px;
-    text-align: center;
-}
-
-footer {
-    margin-top: 20px;
-    background-color: #222;
-    color: white;
-    padding: 10px;
-}
+</body>
+</html>
