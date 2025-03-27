@@ -7,47 +7,38 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <header>
+        <h1>Virtual Farmers Market</h1>
+        <input type="text" id="search" placeholder="Search items...">
+    </header>
+    <main>
+        <h2>Fresh Produce</h2>
+        <ul id="items">
+            <li>🍎 Apples - $3/kg</li>
+            <li>🍌 Bananas - $2/kg</li>
+            <li>🥕 Carrots - $1.5/kg</li>
+            <li>🍅 Tomatoes - $2.5/kg</li>
+        </ul>
 
-    <!-- Title -->
-    <h1>Virtual Farmers Market</h1>
+        <h2>Dairy Products</h2>
+        <ul>
+            <li>🥛 Milk - $1.2/L</li>
+            <li>🧀 Cheese - $5/kg</li>
+            <li>🍦 Yogurt - $2/container</li>
+        </ul>
 
-    <!-- Search Bar (Top Right) -->
-    <input type="text" id="searchBox" placeholder="Search items..." onkeyup="searchItems()">
-
-    <!-- Items List -->
-    <ul id="itemList">
-        <li>🍎 Apples - $3/kg</li>
-        <li>🍌 Bananas - $2/kg</li>
-        <li>🥕 Carrots - $1.5/kg</li>
-        <li>🍅 Tomatoes - $2.5/kg</li>
-        <li>🍉 Watermelon - $4/kg</li>
-        <li>🍇 Grapes - $5/kg</li>
-        <li>🍍 Pineapple - $3.5/kg</li>
-    </ul>
-
-    <!-- Creator Details -->
+        <h2>Organic Spices</h2>
+        <ul>
+            <li>🌿 Basil - $0.5/bunch</li>
+            <li>🌶️ Chili Powder - $3/bag</li>
+            <li>🧄 Garlic - $2/kg</li>
+        </ul>
+    </main>
     <footer>
-        <p>Created by: Your Name</p>
-        <p>Email: your-email@example.com</p>
-        <p>Contact: +123 456 7890</p>
+        <p>Created by:SIVA</p>
+        <p>Email:sivaprakashponraj@gamil.com</p>
+        <p>Contact:9345725674</p>
     </footer>
-
-    <!-- JavaScript for Search Function -->
-    <script>
-        function searchItems() {
-            let input = document.getElementById("searchBox").value.toLowerCase();
-            let items = document.getElementById("itemList").getElementsByTagName("li");
-
-            for (let i = 0; i < items.length; i++) {
-                let itemText = items[i].innerText.toLowerCase();
-                if (itemText.includes(input)) {
-                    items[i].style.display = "block";
-                } else {
-                    items[i].style.display = "none";
-                }
-            }
-        }
-    </script>
-
+    <script src="script.js"></script>
 </body>
 </html>
